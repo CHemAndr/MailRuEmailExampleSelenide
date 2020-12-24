@@ -1,0 +1,61 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="ad.size" content="width=240,height=400">
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>240x400</title>
+<!-- write your code here -->
+<script src="createjs-2015.11.26.min.js"></script>
+<script src="240x400.js"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("55D4E4A41D05D8439ECCCB666F5C3701");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib._240x400();
+	stage = new lib.Stage(canvas);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<!-- write your code here -->
+</head>
+<body onload="init();" style="margin:0px;" marginwidth="0" marginheight="0">
+<a href="https://r.mail.ru/redir/AACc7wEUGlucJFDKD2srcK6Z0QycpZi-nKkPwtoswzZgkTqGu9Se3Ar-b4bKITGiaVfJr8fBnnoVfZFDbsatmYilIHJ8V0sm38Tr2L6__0IJAB7fa2Nd2s4xrqWvaX-3hDm_UoyRN6a8tJkcZUsWmHHDRNamrAf3QkANSzaT9lzLUcRbwyuPW3RzAwAA-4vmBE1DEGGKFB3dL4OP5aZ-Q5L6M_p_hWtrR8cjuh_ZsvR8tjEqhLJ05UiipfuJlGPokgPE9fXtiCpC4cM_zTh128bqJ5J8-HE_fyT3lG2Ehy1PKW_VBeZpvPLGlruIRS4C5RV0RpDEU1Rc7B8bRu74zlQu83kuRRyNxQHoWv2v-A1dcVHEGEaOZnHG8uYbUE5iunPON5f4rmMIo0d-IoHydHl4ZG31yKbNycyXAjoIQ7jgOiainWbI__rxHrdJoZA52HWA2eDvVhdiErM_9DVlLkNVVxfnNBW8HtL1ATKZaKvitCtxSsqIIwV6lZw9f187L2dJQp-XpJ4I5HLM_nKmB6OD24AJgIRHOm2e0nLuKcLUGOCmAxZPNTJm8Hi1sNvNKFY1zuIwjF86khIQ_mw-95rzx6559qV1jTAc3lMYdbzzokDPG0nrrIil083-6uztbgfl3YC-TJpLD4XbepqIyTRUSJO4y9PZIv0bMA7vkuLchKkTebit4zqIJq3Gc0MOHKSCX-DwWE3ea6ZcVthuodhdlQvPdzwRfIE1GO-qVPlc-Jzln1KGLGNc0EjxOpPgFO7TRks_dqeG-UuXBLq70OLGvR4rWhiKk-48vT9zQBEXb_vrDv7DRH4YPs5gU8U9HeRMhtuShh7SCvcKgc22KqylfRCth6tV6LkWt9F449wpmQ9PWAvkwCLP9ZOXHbXIcHBd7O9C9p9HijhigmfUscoXogmHqdGSvz4gxc0C6k4BNgrjrEwSHj64rA9zLvRQvlX9SDnyLZ2BrPfkxms5AmQfvq6Z2u0SeBzhlauScvr337iVesHzUzvO4Eb4eynHMyblQ1mYZwSjNvtSKMV3XQHKW75GaKqJ1gvIcJFT1iIu-d7lOZPhGILXC08lxbNmaTFu3JmjtZ0AmqVO69RjpBXk-gQ1kzx5KGls-734cU1vAoBc0i-DikpmzvZbNljX1JJmC1G6OUKVSKhKmsv3oNYM_FiEVRJH8Te3AWXmliSXq1IbGVl6kIHCK9IBiRs-2GtHkhslI0cCbCWhN0fr9RqdUus7QxABm4ISpq0wH8bb4VRVi7A0E4Ksv1jTYPSuPBrdPJGjYLnqu3_qagz-ayMZ7HA8T1uClk_elyqgekcJP94ubXDZf_tLWo-XlmB4AdQP_z4isdNTq03zEI5NrYh2vhTai3DXhXyxDvI" target="_blank">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:240px; height:400px">
+		<canvas id="canvas" width="240" height="400" style="position: absolute; display: block; background-color: rgb(255, 255, 255); width: 240px; height: 400px;"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:240px; height:400px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>
+</a>
+
+</body></html>

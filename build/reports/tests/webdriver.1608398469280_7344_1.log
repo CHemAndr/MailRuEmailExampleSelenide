@@ -1,0 +1,176 @@
+[1608398474.678][INFO]: Starting ChromeDriver 87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}) on port 31998
+[1608398474.680][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1608398477.004][INFO]: [806c94f6d7c77306603e61c8dd8c464b] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+            "excludeSwitches": [ "enable-automation", "load-extension" ],
+            "extensions": [  ],
+            "prefs": {
+               "credentials_enable_service": false,
+               "download.default_directory": "C:\\Users\\Андрей\\IdeaProjects\\MailTestSelenid\\build\\downloads\\1608398448322_7344_1",
+               "plugins.always_open_pdf_externally": true,
+               "profile.default_content_setting_values.automatic_downloads": 1
+            }
+         },
+         "pageLoadStrategy": "normal"
+      } ]
+   },
+   "desiredCapabilities": {
+      "acceptInsecureCerts": true,
+      "acceptSslCerts": true,
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--proxy-bypass-list=\u003C-loopback>", "--disable-dev-shm-usage", "--no-sandbox" ],
+         "excludeSwitches": [ "enable-automation", "load-extension" ],
+         "extensions": [  ],
+         "prefs": {
+            "credentials_enable_service": false,
+            "download.default_directory": "C:\\Users\\Андрей\\IdeaProjects\\MailTestSelenid\\build\\downloads\\1608398448322_7344_1",
+            "plugins.always_open_pdf_externally": true,
+            "profile.default_content_setting_values.automatic_downloads": 1
+         }
+      },
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "pageLoadStrategy": "normal",
+      "takesScreenshot": true
+   }
+}
+[1608398477.144][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "credentials_enable_service": false,
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "download": {
+      "default_directory": "C:\\Users\\Андрей\\IdeaProjects\\MailTestSelenid\\build\\downloads\\1608398448322_7344_1"
+   },
+   "plugins": {
+      "always_open_pdf_externally": true
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "automatic_downloads": 1,
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1608398477.145][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1608398477.418][INFO]: Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-background-networking --disable-backgrounding-occluded-windows --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-blink-features=ShadowDOMV0 --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --no-sandbox --no-service-autorun --password-store=basic --proxy-bypass-list=<-loopback> --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\A4F7~1\AppData\Local\Temp\scoped_dir7688_1064863376" data:,
+[1608398512.790][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1608398514.773][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1608398528.984][INFO]: [806c94f6d7c77306603e61c8dd8c464b] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "browserVersion": "87.0.4280.88",
+      "chrome": {
+         "chromedriverVersion": "87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761})",
+         "userDataDir": "C:\\Users\\A4F7~1\\AppData\\Local\\Temp\\scoped_dir7688_1064863376"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:57168"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "806c94f6d7c77306603e61c8dd8c464b"
+}
+[1608398529.155][INFO]: [806c94f6d7c77306603e61c8dd8c464b] COMMAND SetWindowRect {
+   "height": 768,
+   "width": 1366
+}
+[1608398529.155][INFO]: Waiting for pending navigations...
+[1608398529.171][INFO]: Done waiting for pending navigations. Status: ok
+[1608398529.311][INFO]: Waiting for pending navigations...
+[1608398529.312][INFO]: Done waiting for pending navigations. Status: ok
+[1608398529.312][INFO]: [806c94f6d7c77306603e61c8dd8c464b] RESPONSE SetWindowRect {
+   "height": 768,
+   "width": 1366,
+   "x": 10,
+   "y": 10
+}
+[1608398529.326][INFO]: [806c94f6d7c77306603e61c8dd8c464b] COMMAND SetTimeouts {
+   "pageLoad": 30000
+}
+[1608398529.326][INFO]: [806c94f6d7c77306603e61c8dd8c464b] RESPONSE SetTimeouts
+[1608398529.592][INFO]: [806c94f6d7c77306603e61c8dd8c464b] COMMAND Navigate {
+   "url": "https://e.mail.ru/inbox?newreg=1&afterReload=1"
+}
+[1608398529.592][INFO]: Waiting for pending navigations...
+[1608398529.595][INFO]: Done waiting for pending navigations. Status: ok
+[1608398531.035][INFO]: Waiting for pending navigations...
+[1608398540.151][INFO]: Done waiting for pending navigations. Status: ok
+[1608398540.151][INFO]: [806c94f6d7c77306603e61c8dd8c464b] RESPONSE Navigate
+[1608398540.194][INFO]: [806c94f6d7c77306603e61c8dd8c464b] COMMAND Quit {
+
+}
+[1608398540.603][INFO]: [806c94f6d7c77306603e61c8dd8c464b] RESPONSE Quit

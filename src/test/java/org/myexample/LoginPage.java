@@ -24,6 +24,7 @@ public class LoginPage {
              // Кнопка Х на "Загрузка фотографии и создание подписи"
              btnX = $(By.xpath("//div[contains(@class,'icon icon_popup-close')]"));
 
+     //Ввод логина, не запоминем его, нажать кнопку "логин"
      public static void inputLogin(String login){
          loginField.click();
          loginField.setValue(login);
@@ -31,14 +32,14 @@ public class LoginPage {
          buttonLg.click();
 
      }
-
+     //Ввод пароля, нажать кнопку "пароль"
      public static void inputPsw(String psw) {
          pswField.click();
          pswField.setValue(psw);
          buttonPsw.click();
 
      }
-
+     // Закрыть окно с фото
      public  static  void downWinFoto() {
          btnX.click();
      }

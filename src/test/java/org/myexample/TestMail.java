@@ -40,7 +40,6 @@ public class TestMail {
     Selenide.switchTo().defaultContent();
     MailPage.sendBtnClk();
     MailPage.outMail();
-
  }
 
 }

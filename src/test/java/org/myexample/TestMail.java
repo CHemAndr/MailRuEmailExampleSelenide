@@ -14,7 +14,6 @@ public class TestMail {
  static void setup(){
      Configuration.timeout = 60000;
      open(ConfProperties.getProperty("loginpage"));
-
  }
 
  @Test
